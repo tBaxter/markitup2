@@ -1,0 +1,147 @@
+:root {
+    /* Set these variables to suit yourself */
+    --miu-bg-color: #000;
+    --miu-button-text: #ddd;
+    --miu-border-color: #222;
+    --miu-border-radius: 3px;
+}
+
+.markItUp { /* this is the parent element of the markitup box */ 
+    background-color: var(--miu-bg-color);
+    border: 1px solid var(--miu-border-color);
+    border-radius: var(--miu-border-radius);
+
+    & .markItUpHeader ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    
+        & li {
+            list-style: none;
+            position: relative;
+            height: 2rem;
+            min-width: 2rem;
+            text-align: center;
+            padding: 0 0.5em;
+            font-size: 0.875em
+        }
+        & > li { border-right: 1px solid var(--miu-border-color); }
+        & > li:last-child {border: 0}
+        & a {
+            text-decoration: none;
+            line-height: 2em;
+
+            & :focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+.markdown .markItUpHeader ul li:after {
+    content: "";
+    display: block;
+}
+
+.markdown .markItUpHeader ul li.icon-text {
+    padding: 0 1em;
+}
+.markdown .markItUpHeader ul li.icon-text:before {
+    padding-right: .5em;
+}
+.markdown .markItUpHeader ul li .sub-button {
+    border-radius: 1rem;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #505050;
+    background: #000;
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+    position: relative;
+    margin-right: 2px;
+    padding: 0 0.5rem;
+    min-width: 1rem;
+}
+.markdown .markItUpHeader ul li .sub-button:first-child {
+    margin-left: 1rem;
+}
+.markdown .markItUpHeader ul li.sub-nav {
+    min-width: 10em;
+    text-align: left;
+}
+.markdown .markItUpHeader ul li.sub-nav li {
+    list-style: none;
+    margin: 0;
+    padding: inherit 0.5em;
+}
+.markdown .markItUpHeader ul li.sub-nav ul {
+    display: none;
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+}
+.markdown .markItUpHeader ul li.sub-nav:hover ul {
+    display: block;
+}
+.markdown .markItUpHeader ul li .divide-left, .markdown .markItUpHeader ul li .divide-right {
+    display: inline-block;
+}
+.markdown .markItUpHeader ul li .divide-left {
+    padding-left: 0.5rem;
+    margin-left: 0.25rem;
+}
+.markdown .markItUpHeader ul li .divide-right {
+    border-right: 1px solid;
+    padding-right: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.markdown .markItUpHeader ul li.sub-nav ul {
+    position: absolute;
+    max-width: 7.5em;
+    z-index: 1;
+
+    & li {
+        border: 0;
+        padding: 0
+    }
+}
+
+.markItUpButton:before {
+    font-size: 1.1em;
+    margin-right: 0.25em;
+
+}
+.icon-add:before    { content: '\2b'; } /* '+' */
+.icon-audio:before  { content: '🔊'}
+.icon-bold:before   { content: '𝐁'; font-weight: 900; } 
+.icon-cal:before    { content: '📅'}
+.icon-check:before  { content: '☑'; font-size: 120%;}
+.icon-cog:before    { content: '⚙'; font-size: 120%;}
+.icon-delete:before { content: '❌'; }
+.icon-edit:before   { content: '✎'; }
+.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-grid:before   { content: '\e800'; } /* '' */
+.icon-heart-empty:before { content: '\2661'; } /* '♡' */
+.icon-italic:before { content: '𝐼'; font-style: oblique; font-weight: 600; } 
+.icon-list:before        { content: '\e782'; } /* '' */
+.icon-ul:before     { content: '\f0ca'; } /* '' */
+.icon-ol:before     { content: '\f0cb'; } /* '' */
+.icon-list-details:before  { content: '\e003'; } /* '' */
+.icon-map:before    { content: '📍'}
+.icon-menu:before   { content: '\2630'; } /* '☰' */
+.icon-menu-large:before { content: '\f0c9'; } /* '' */
+
+.icon-photo:before {content: '📷'}
+.icon-camera:before { content: '📷'; } /* '\1f4f7' */
+.icon-picture:before { content: '📷'; } /* '\1f304' */
+
+.icon-comment:before { content: '💬'; } 
+.icon-quote:before { content: '💬'; } 
+.icon-thumb-list:before { content: '\e801'; } /* '' */
+.icon-user-1:before { content: '\e802'; } /* '' */
+.icon-lock:before { content: '🔒'; }   
+.icon-unlock:before { content: '🔓'; } 
+.icon-link:before { content: '🔗'; }
+.icon-video:before { content: '🎬'; } 
+.icon-sticky:before {content: '📌'; }  
